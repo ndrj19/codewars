@@ -43,7 +43,7 @@ const hamsterMe = (code, message) => {
 };
 
 console.log(hamsterMe("hamster", "hamster"));
-// console.log(hamsterMe("hmster", "hamster"));
+console.log(hamsterMe("hmster", "hamster"));
 // console.log(hamsterMe("hamster", "helpme"));
 // console.log(hamsterMe("hamster", "abcdefghijklmnopqrstuvwxyz"));
 // console.log(hamsterMe("hhhhammmstteree", "hamster"));
