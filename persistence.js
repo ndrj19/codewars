@@ -1,14 +1,17 @@
-const persistence = (num, calls = 0) => {
-  if (num < 10) return 0;
-  calls += 1;
-  const digitsMultiplied = String(num)
-    .split("")
-    .reduce((acc, cv) => acc * cv, 1);
-  if (String(digitsMultiplied).length === 1) return calls;
-  return persistence(digitsMultiplied, calls);
+const persistence = (num) => {
+  if (num.toString().length === 1) return 1;
+
+  let count = 0;
+  let n = num;
+  while (n.toString().length >= 2) {
+    n = n
+      .toString()
+      .split("")
+      .map((e) => Number(e))
+      .reduce((a, b) => a * b);
+    count++;
+  }
+  return count;
 };
 
-console.log(persistence(39));
-console.log(persistence(25));
 console.log(persistence(999));
-console.log(persistence(4));
